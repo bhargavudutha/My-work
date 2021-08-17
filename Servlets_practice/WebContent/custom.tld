@@ -1,0 +1,23 @@
+<!--<taglib>
+   <tlib-version>1.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+<tag>
+<name>cube</name>
+<tag-class>com.servlets_practice.MyFirstSimpleTagSupportDemo</tag-class>
+<attribute>
+<name>number</name>
+<required>true</required>
+</attribute>
+<body-content>empty</body-content>
+</tag>
+</taglib>-->
+
+<taglib>
+  <tlib-version>1.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+<tag>
+<name>MyTag</name>
+<tag-class>com.servlets_practice.MyFirstSimpleTagSupportDemo</tag-class>
+<body-content>Scriptless</body-content>
+</tag>
+</taglib>

@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML Assignment</title>
+</head>
+<style>
+h3
+{
+text-align:center;
+}
+</style>
+<script>
+function validate()
+{
+var name=document.getElementById("name").value;
+var fathername=document.getElementById("fathername").value;
+var postaladdress=document.getElementById("postaladdress").value;
+var personaladdress=document.getElementById("personaladdress").value;
+var pincode=document.getElementById("pincode").value;
+var emailid=document.getElementById("emailid").value;
+var city=document.getElementById("city").value;
+var course=document.getElementById("course").value;
+var state=document.getElementById("state").value;
+var dob=document.getElementById("dob").value;
+var mobileno=document.getElementById("mobileno").value;
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+var others=document.getElementById("others").checked;
+document.getElementById("spanname").innerHTML="";
+document.getElementById("spanfathername").innerHTML="";
+document.getElementById("spanpostaladdress").innerHTML="";
+document.getElementById("spanpersonaladdress").innerHTML="";
+document.getElementById("spanpincode").innerHTML="";
+document.getElementById("spanemailid").innerHTML="";
+document.getElementById("spandob").innerHTML="";
+document.getElementById("spanmobileno").innerHTML="";
+document.getElementById("spangender").innerHTML="";
+document.getElementById("spancity").innerHTML="";
+document.getElementById("spancourse").innerHTML="";
+document.getElementById("spanstate").innerHTML="";
+
+ 
+
+ 
+
+    if(name=="")
+        {
+        document.getElementById("spanname").innerHTML="Name should not be empty";
+        return false;
+        }
+    else if(fathername=="")
+    {
+        document.getElementById("spanfathername").innerHTML="Father Name should not be empty";
+        return false;
+    }
+    else if(postaladdress=="")
+    {
+        document.getElementById("spanpostaladdress").innerHTML="Postal Address should not be empty";
+        return false;
+    }
+    else if(personaladdress=="")
+    {
+        document.getElementById("spanpersonaladdress").innerHTML="Personal Address should not be empty";
+        return false;
+    }
+    else if(male==false &female==false & others==false)
+    {
+        document.getElementById("spangender").innerHTML="Gender should not be empty";
+        return false;
+    }
+    else if(city=="---Select---")
+    {
+        document.getElementById("spancity").innerHTML="Select City";
+        return false;
+    }
+    else if(course=="---Select---")
+    {
+        document.getElementById("spancourse").innerHTML="Select Course";
+        return false;
+    }
+    else if(state=="---Select---")
+    {
+        document.getElementById("spanstate").innerHTML="Select State";
+        return false;
+    }
+    else if(pincode=="")
+    {
+        document.getElementById("spanpincode").innerHTML="Pincode should not be empty";
+        return false;
+    }
+    else if(emailid=="")
+    {
+        document.getElementById("spanemailid").innerHTML="EmailId should not be empty";
+        return false;
+    }
+    else if(dob=="")
+    {
+        document.getElementById("spandob").innerHTML="DOB should not be empty";
+        return false;
+    }
+    else if(mobileno=="")
+    {
+        document.getElementById("spanmobileno").innerHTML="Mobile No should not be empty";
+        return false;
+    }
+}
+</script>
+<body>
+<h3>Student Registration Form</h3>
+<form action="HTMLAssignment.html"onsubmit="return validate()">
+<table style="margin-left:auto;margin-right:auto;background-color:CYAN">
+<tr>
+<td>Name</td>
+<td><input type="text" id="name"></td>
+<td><span id="spanname"></span></td>
+</tr>
+<tr>
+<td>Father Name</td>
+<td><input type="text" id="fathername"></td>
+<td><span id="spanfathername"></span></td>
+</tr>
+<tr>
+<td>Postal Address</td>
+<td><input type="text" id="postaladdress"></td>
+<td><span id="spanpostaladdress"></span></td>
+</tr>
+<tr>
+<td>Personal Address</td>
+<td><input type="text" id="personaladdress"></td>
+<td><span id="spanpersonaladdress"></span></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input type="radio" id="male" name="gender">Male
+<input type="radio" id="female" name="gender">Female
+<input type="radio" id="others" name="gender">Other</td>
+<td><span id="spangender"></span></td>
+</tr>
+<tr>
+<td>
+City</td>
+<td><select  id="city">
+<option>---Select---</option>
+<option>Hyderabad</option>
+<option>Banglore</option>
+<option>Chennai</option>
+<option>Pune</option>
+</select><br/>
+</td>
+<td><span id="spancity"></span></td>
+</tr>
+<tr>
+<td>
+Course</td>
+<td><select id="course">
+<option>---Select---</option>
+<option>C</option>
+<option>C++</option>
+<option>Java</option>
+<option>Python</option>
+</select>
+</td>
+<td><span id="spancourse"></span></td>
+</tr>
+<tr>
+<td>
+State</td>
+<td><select id="state">
+<option>----Select----</option>
+<option>Andhra Pradesh</option>
+<option>Telangana</option>
+<option>Karnataka</option>
+<option>Tamil Nadu</option>
+</select><br/>
+</td>
+<td><span id="spanstate"></span></td>
+</tr>
+<tr>
+<td>Pin Code</td>
+<td><input type="text"  id="pincode"></td>
+<td><span id="spanpincode"></span></td>
+</tr>
+<tr>
+<td>Emailid </td>
+<td><input type="email" id="emailid"></td>
+<td><span id="spanemailid"></span></td>
+</tr>
+<tr>
+<td>DOB</td>
+<td><input type="date" id="dob"></td>
+<td><span id="spandob"></span></td>
+</tr>
+<tr>
+<td>MobileNo</td>
+<td><input type="tel" pattern="[0-9]{10}" id="mobileno"></td>
+<td><span id="spanmobileno"></span></td>
+</tr>
+<tr>
+<td><input type="reset"></td>
+<td><input type="submit"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+
